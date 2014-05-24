@@ -1,0 +1,22 @@
+html {
+ height: 100% 
+}
+
+body { 
+	height: 100%; 
+	margin: 0;
+	padding: 0 
+} 
+#main-container {
+	margin-left: 25%;
+	width:50%;
+	height:100%
+}
+#map_canvas {
+ height: 60% 
+}
+
+/*body{
+  padding: 40px 15px;
+  text-align: center;
+}*/
