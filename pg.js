@@ -1,8 +1,8 @@
 function initialize() {
 	var points = getData();
 	var mapOptions = {
-		center: new google.maps.LatLng(37.774546, -122.433523),
-		zoom: 13,
+		center: new google.maps.LatLng(-22  , -44),
+		zoom: 7,
 		mapTypeId: google.maps.MapTypeId.SATELLITE};
 
 		var map = new google.maps.Map(document.getElementById('map_canvas') ,
