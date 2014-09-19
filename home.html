@@ -2,13 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-
+    <meta charset="UTF-8">
     <!-- This is needed for google maps...  -->
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     
     <link href="./pg.css" rel="stylesheet">
 
   </head>
+
+
   <body>
   <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -20,43 +22,56 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Brand</a>
+      <a class="navbar-brand" href="#">WSDB</a>
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <!-- <li class="active"><a href="#">Link</a></li> -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Options <b class="caret"></b></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Model Prop 1</a></li>
-            <li><a href="#">Model Prop 2</a></li>
-            <li><a href="#">Model Prop 3</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Satelite View</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Map View</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
   </div><!-- /.container-fluid -->
 </nav>
-  <div id="main-container">
-      <div id="map_canvas"></div>
+  
+
+  <div id="main-container" class="container" >
+
+    <div  class="col-md-5" id="menu-container" >
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#menu" role="tab" data-toggle="tab">Menu</a></li>
+      </ul>
+      <!-- Tabs contents -->
+      <div class="tab-content">
+        <div class="tab-pane active">
+          <!-- content of the first tab -->
+          <div class="panel-group" id="model-options">
+            <h4> Escolha um modelo de Propagação: </h4>
+            <div class="btn-group col-md-offset-2" data-toggle="buttons"  >
+              <label class="btn btn-primary active">
+                <input type="radio"  id="option1" name="1" checked> Free Spaces 
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio"  name="2" id="option2">  Log Distance
+              </label>
+              <label class="btn btn-primary">
+                <input type="radio"  name="3" id="option3"> Two Ray
+              </label>
+            </div>
+
+            <h4 id="channel-title" >Canais Disponíveis</h4>
+          </div>
+        </div>
+
+      <div class="panel-group" id="accordion-container" > <div id="accordion" ></div></div> 
+      </div>
+    </div>
+    <div id="map_canvas" class=" col-md-5 col-md-offset-1"  ></div>
   </div>
-  <p id="result" ></p>
+
+  <div id="dvLoading"></div>
+
   </body>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization"></script>
-    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./getdata.js"></script>
-    <script type="text/javascript" src="./pg.js"></script>
+
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization,geometry"></script>
+  <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./pg.js"></script>
 
 </html>

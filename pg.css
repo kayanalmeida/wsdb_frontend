@@ -1,22 +1,65 @@
+/*Page stylesheet*/
 html {
  height: 100% 
 }
 
 body { 
-	height: 100%; 
-	margin: 0;
-	padding: 0 
+	height: 80%; 	
 } 
-#main-container {
-	margin-left: 25%;
-	width:50%;
-	height:100%
-}
-#map_canvas {
- height: 60% 
+/* Reminder: All heights from the maps' containers must be defined*/
+
+/*The loading gif image for long server operations*/
+#dvLoading {
+background:url(images/loading.gif) no-repeat center center;
+height: 100%;
+width: 100%;
+position: fixed;
+left: 0;
+top: 0;
+margin: 0 0 0 0;
+z-index: 1000;
 }
 
-/*body{
-  padding: 40px 15px;
-  text-align: center;
-}*/
+/*Page content*/
+
+/*Container of the menu and the maps elemens*/
+#main-container {
+	height:100%;
+}
+
+/*The div that contains the map*/
+#map_canvas {
+ height: 70%;
+}
+/*The tab on the left, with the options*/
+#menu-container{
+	height: 100%;
+	overflow-x: visible;
+	padding: 0 0 0 0;
+}
+
+/*The body of each tab, other properties were inherited from bootstrap.css*/
+
+.tab-content{
+	height: 90%;
+    max-height: 90%;
+	border-radius: 0 4px 4px 4px;
+	border: 1px solid #ddd;
+	border-top-color: transparent;
+}
+/*The propagation model options*/
+#model-options{
+	height: 20%;
+}
+/*The available channels title, inicially, there is no marker on the map, so the title is hidden*/
+#channel-title {
+	visibility:hidden
+}
+
+/*The available channels accordion container*/
+#accordion-container{
+	max-height: 72%;
+	overflow-y: scroll;
+	overflow-x: visible;
+}
+
